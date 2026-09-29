@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Info Card</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>User Info Card</h1>
+    <p class="subtitle">Fill out the form, then click "Show My Info".</p>
+
+    <div class="container">
+      <!-- FORM SECTION -->
+      <form id="infoForm">
+        <h2>Your Information</h2>
+
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" placeholder="Juan Dela Cruz" />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="juan@email.com" />
+
+        <label for="age">Age</label>
+        <input type="number" id="age" min="1" max="120" />
+
+        <label for="birthday">Birthday</label>
+        <input type="date" id="birthday" />
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="09123456789" />
+
+        <label for="city">City / Town</label>
+        <input type="text" id="city" />
+
+        <label for="school">School</label>
+        <input type="text" id="school" />
+
+        <label for="course">Course / Grade Level</label>
+        <select id="course">
+          <option value="">-- Choose one --</option>
+          <option value="BSIT">BSIT</option>
+          <option value="BSCS">BSCS</option>
+          <option value="Senior High">Senior High</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label>Favorite Color</label>
+        <div class="options">
+          <input type="radio" name="color" value="Red" id="red" />
+          <label for="red" class="inline">Red</label>
+          <input type="radio" name="color" value="Blue" id="blue" />
+          <label for="blue" class="inline">Blue</label>
+          <input type="radio" name="color" value="Green" id="green" />
+          <label for="green" class="inline">Green</label>
+          <input type="radio" name="color" value="Yellow" id="yellow" />
+          <label for="yellow" class="inline">Yellow</label>
+        </div>
+
+        <label>Favorite Subject</label>
+        <div class="options">
+          <input type="radio" name="subject" value="Math" id="math" />
+          <label for="math" class="inline">Math</label>
+          <input type="radio" name="subject" value="Science" id="science" />
+          <label for="science" class="inline">Science</label>
+          <input
+            type="radio"
+            name="subject"
+            value="Programming"
+            id="programming" />
+          <label for="programming" class="inline">Programming</label>
+        </div>
+
+        <label>Hobbies</label>
+        <div class="options">
+          <input type="checkbox" name="hobby" value="Gaming" id="gaming" />
+          <label for="gaming" class="inline">Gaming</label>
+          <input type="checkbox" name="hobby" value="Music" id="music" />
+          <label for="music" class="inline">Music</label>
+          <input type="checkbox" name="hobby" value="Sports" id="sports" />
+          <label for="sports" class="inline">Sports</label>
+          <input type="checkbox" name="hobby" value="Reading" id="reading" />
+          <label for="reading" class="inline">Reading</label>
+        </div>
+
+        <label for="bio">About Me</label>
+        <textarea
+          id="bio"
+          rows="3"
+          placeholder="Write something about yourself..."></textarea>
+
+        <button type="button" onclick="showMyInfo()">Show My Info</button>
+        <button type="button" onclick="clearForm()">Clear</button>
+      </form>
+
+      <!-- OUTPUT SECTION -->
+      <article class="card">
+        <h2>My Info Card</h2>
+        <p id="message">Nothing to show yet. Click "Show My Info" first.</p>
+
+        <div class="row">
+          <span>Full Name:</span> <span class="answer"></span>
+        </div>
+        <div class="row"><span>Email:</span> <span class="answer"></span></div>
+        <div class="row"><span>Age:</span> <span class="answer"></span></div>
+        <div class="row">
+          <span>Birthday:</span> <span class="answer"></span>
+        </div>
+        <div class="row"><span>Phone:</span> <span class="answer"></span></div>
+        <div class="row">
+          <span>City / Town:</span> <span class="answer"></span>
+        </div>
+        <div class="row"><span>School:</span> <span class="answer"></span></div>
+        <div class="row">
+          <span>Course / Grade:</span> <span class="answer"></span>
+        </div>
+        <div class="row">
+          <span>Favorite Color:</span> <span class="answer"></span>
+        </div>
+        <div class="row">
+          <span>Favorite Subject:</span> <span class="answer"></span>
+        </div>
+        <div class="row">
+          <span>Hobbies:</span> <span class="answer"></span>
+        </div>
+        <div class="row">
+          <span>About Me:</span> <span class="answer"></span>
+        </div>
+      </article>
+    </div>
+
+    <footer>
+      <p>CUERDO, CHARLES WWILHELM F. | 2IT - A | CCS114</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
